@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+        <title>FCC - Product landing page</title>
+    </head>
+
+    <body>
+        <header id="header">
+            <div id="top-header">
+                <div id="logo">
+                    <img src="images/satie-icon.jpg" alt="Eric Satie" id="header-img">
+                    <h1>Esoteric Satie</h1>
+                    <p>Add some music to your life, oui !</p>                
+                </div>
+                <nav id="nav-bar">
+                    <ul>
+                        <li><a href="#about" class="nav-link">Who am I?</a></li>
+                        <li><a href="#findme" class="nav-link">Where am I?</a></li>
+                        <li><a href="#music" class="nav-link">My musical offering</a></li>
+                        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="hero-text">
+                <p>I have never written a note I didn't mean.</p>
+            </div>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>Who am I?</h2>
+                <div id="about-container">
+                    <div class="leftpicture">
+                        <img src="images/satie-portrait.jpg" alt="Portrait of Erik Satie">
+                    </div>
+                    <div class="righttext">
+                        <p>I came into the world very young, in an age that was very old.</p>
+                        <p>Playing piano is something nice, oui. I am a freelance composer since a time I do not remember. Against conventions and virtuosos, my music is playable by anyone, even a rock. It will takes time for It to play It perfectly, tough, but I have faith in minerals, yes.</p>
+                    </div>
+                </div> 
+            </section>
+
+            <section id="findme">
+                <h2>Where am I?</h2>
+                <div id="findme-container">
+                    <div class="textfindme">
+                        <p id="firstp">Well... looks like I'm dead?</p>
+                        <p>So, I guess that if you want to find me, you should visit the little cemetary of Arcueil. It is very peaceful here, oui.</p>
+                        <img src="images/satie-grave.jpg" alt="The grave of Eric Satie">
+                    </div>
+                    <!--Map not showing in codepen :-( using altrnative code
+                    <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.8369734680473!2d2.337918915114892!3d48.80409001248341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67112802ca3bd%3A0x2f1d1c5bd6fc50dc!2sCimeti%C3%A8re%20d&#39;Arcueil!5e0!3m2!1sfr!2sfr!4v1630744785461!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div> -->
+                    <div class="map"><iframe width="600" height="450" id="gmap_canvas" src="https://maps.google.com/maps?q=Arcueil%20cimeti%C3%A8re&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></div>
+                </div>
+
+            </section>
+
+            <section id="music">
+                <h2>My musical offering</h2>
+                <h3>My latest release</h3>
+                <div id="video-frame">
+                    <iframe width="720" height="400" src="https://www.youtube.com/embed/rzuWmVaUoFw" id=video></iframe>
+                </div>
+                    
+                <h3>Pricing</h3>
+                <div id="prestations">
+                    <div id="preludes">
+                        <div class="imageprestations">
+                            <p><img src="images/keyboard.avif" alt="A piano keyboard"></p>
+                        </div>
+                        <p>A custom set of Preludes : 24€</p>
+                        <p>The classic !</p>
+                    </div>
+                    <div id="fantaisies">
+                        <div class="imageprestations">
+                            <img src="images/sea-cucumber-S-Purcell.jpg" alt="A sea cucumber">
+                        </div>                        
+                        <p>Fantaisies flasques and unpredictable : 100€ each</p>
+                        <p>Perfect for a gift !!</p>
+                    </div>
+                    <div id="ammeublement">
+                        <div class="imageprestation">
+                            <p><img src="images/ammeublement.avif" alt="A chair"></p>
+                        </div>                        
+                        <p>Musique d'ammeublement : from 1.2798546€ to 1 000 000 ¥</p>
+                        <p>The must-have !!!</p>
+                    </div>
+                    
+
+                </div>
+            </section>
+
+            <section id="testimonials">
+                <h2>Testimonials</h2>
+                <div id="testimonials-container">
+                    <div id="chopin">
+                        <img src="images/chopin.png" alt="Frederic Chopin">
+                        <blockquote>I was born too early to appreciate such music!</blockquote>
+                    </div>
+                    <div id="knock">
+                        <img src="images/knock.jpg" alt="Louis Jouvet, the doctor Knock">
+                        <blockquote>Since I started using the Music d'ammeublement™ in my laboratory, my patients started to feel very sick. I am very happy.</blockquote>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section id="contact">
+                <h2>Do you want to contact me? Oui? Œuf Corse!</h2>
+                <form method="post" action="https://www.freecodecamp.com/email-submit" id="form">
+                    <p>
+                        <label for="name" id="name-label">Tell me tour name</label><br>
+                        <input type="text" name="name" placeholder="Your name" id="name" required>
+                    </p>
+                    <p>
+                        <label for="email" id="email-label">What is your email address ?</label><br>
+                        <input type="email" name="email" placeholder="Your email adress" id="email" required>
+                    </p>                    
+                    <p>
+                        <label for="comment">Please, tell me everything, oui.</label><br>
+                        <textarea name="comment" id="comment" placeholder="Your text, oui."></textarea>
+                    </p>                    
+                    <p id="last">
+                        <input type="submit" value="I'm ready to send!!!" id="submit" />
+                    </p>    
+                </form> 
+            </section>
+        </main>
+        
+    </body>
+</html>

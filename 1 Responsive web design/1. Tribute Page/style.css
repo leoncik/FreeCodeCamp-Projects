@@ -1,0 +1,191 @@
+/* Responsive rules */
+
+@media screen and (max-width: 820px) {
+
+    .title-banner img
+    {
+        display: none;
+    }
+    h1
+    {
+        text-align: center;
+    }
+    
+}
+
+/* General */
+
+#wraper
+{
+    margin-top: 140px;
+}
+
+body
+{
+    background-color: black;
+    margin: 0;
+    font-family: 'Cormorant', serif;
+}
+h1
+{
+    color: white;
+    font-size: 4em;
+    text-shadow: 5px 10px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+h2
+{
+    font-size: 3em;
+    text-decoration: underline;
+}
+h3
+{
+    font-size: 2em;
+}
+a
+{
+    text-decoration: none;
+    color: rgb(190, 173, 173);
+}
+a:hover
+{
+    text-decoration: underline;
+}
+figcaption
+{
+    color: black;
+}
+#tribute-info
+{
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+}
+main img
+{
+    margin: 0 10px 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Header */
+.music-line-container
+{
+    height: 230px;
+}
+
+.line-borders 
+{
+    width: 100%;
+    height: 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    margin-bottom: 18px;
+}
+
+.last-line-border
+{
+    width: 100%;
+    height: 20px;
+    border-top: 3px solid white;
+}
+
+.title-banner
+{
+    display: flex;
+    gap: 50px;
+    margin-left: 10px;
+    position: relative;
+    bottom: 210px;
+}
+.title-banner img
+{
+    border-radius: 50%;
+    box-shadow: 10px 0 black;
+}
+.title-banner h1
+{
+    align-self: center;
+}
+
+/* Life section */
+#life
+{
+    padding: 10px 25px 70px 25px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+#life h2
+{
+    text-align: center;
+}
+
+#sheet
+{
+    object-fit: cover;
+    float: right;
+    width: 170px;
+    height: 190px;
+}
+#img-div
+{
+    float: right;
+    position: relative;
+    bottom: 10px;
+}
+#image
+{
+    height: auto;
+    display: block;
+    max-width: 170px;
+    width: 170px;
+    position: relative;
+    left: 10px;
+}
+#grave
+{
+    float: left;
+    width: 170px;
+    height: 190px
+}
+
+/* Music */
+
+#music
+{
+    padding: 10px 25px 70px 25px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+#music h2
+{
+    text-align: center;
+}
+#music *
+{color: rgb(255, 255, 255);}
+
+
+/* Recordings */
+#recordings
+{
+    padding: 10px 25px 70px 25px;
+    background-color: rgb(255, 255, 255);
+}
+#recordings h2
+{
+    text-align: center;
+}
+#recordings h2, h3, p
+{color: rgb(0, 0, 0);}
+
+/* Footer */
+footer
+{
+    padding: 10px 25px 70px 25px;
+    background-color: black;
+    color: white;
+}
+footer h2
+{
+    text-align: center;
+}

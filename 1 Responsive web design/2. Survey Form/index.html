@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Bubblegum+Sans?query=bubb">
+        <title>A super generic survey form</title>
+    </head>
+
+
+    <body>
+        <div id="wraper">
+            <header>
+                <h1 id="title">A super generic survey form</h1>
+                <p id="description">Please, feel free to ignore this survey, nothing will happen after the submission.</p>
+            </header>
+            <main>
+                <form method="post" action="superpage.php" id="survey-form">
+                    <p>
+                        <label for="name" id="name-label">What... is your name ?</label><br>
+                        <input type="text" name="name" placeholder="Your name" id="name" required>
+                    </p>
+                    <p>
+                        <label for="email" id="email-label">What... is your email address ?</label><br>
+                        <input type="email" name="email" placeholder="Your email adress" id="email" required> <!--le type email permet de faire en sorte que cela renvoie une erreur si on entre pas un mail comme il faut-->
+                    </p>
+                    <p>
+                        <label for="dropdown">What... is your quest ?</label><br>
+                        <select name="dropdown" id="dropdown">
+                            <option value="" disabled selected hidden>Select your quest</option>
+                            <option value="grail">To seek the Holy Grail!</option>
+                            <option value="pirate">I want to be a pirate!</option>
+                            <option value="google">Read the Google Privacy Policy!</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="number" id="number-label"> How many... fingers does a centipede have ?</label><br>
+                        <input type="number" name="number" min="0" max="10000" placeholder="Select a number between 0 and 10 000" id="number">
+                    </p>
+                    <p>
+                        <label for="color">What... is your favourite color?</label><br>
+                        <input type="color" name="color" id="color">
+                    </p>
+                    <p>
+                        What... is the average air-speed velocity of an unladen swallow?<br>
+                        <input type="radio" name="speed" value="well" id="well">
+                        <label for="well">Well...</label><br>
+                        <input type="radio" name="speed" value="um" id="um">
+                        <label for="um">Um...</label><br>
+                        <input type="radio" name="speed" value="er" id="er">
+                        <label for="er">Er...</label><br>
+                    </p>
+                    <p>
+                        I have to buy things to the supermarket, what... do you need?<br>
+                        <input type="checkbox" name="bananas" id="bananas" value="bananas">
+                        <label for="bananas">Bananas</label><br>
+                        <input type="checkbox" name="duck" id="duck" value="duck">
+                        <label for="duck">A duck</label>
+                        <input type="checkbox" name="sausages" id="sausages" value="sausages">
+                        <label for="sausages">Sausages</label>
+                        <input type="checkbox" name="church" id="church" value="church">
+                        <label for="church">A church</label>
+                        <input type="checkbox" name="whoopee" id="whoopee" value="whoopee">
+                        <label for="whoopee">A whoopee cushion</label>
+                        <input type="checkbox" name="life" id="life" value="life">
+                        <label for="life">The meaning of life</label>                
+                    </p>
+                    <p>
+                        <label for="comment">Write something I won't read</label><br>
+                        <textarea name="comment" id="comment" placeholder="Feel inspired!"></textarea> <!--cols="100" rows="10"-->
+                    </p>
+                    <p>
+                        It's time to say bye-bye... did you enjoy this survey?<br>
+                        <input type="radio" name="satisfaction" value="satisfaction1" id="satisfaction1" checked>
+                        <label for="satisfaction1">Yes</label><br>
+                        <input type="radio" name="satisfaction" value="satisfaction2" id="satisfaction2">
+                        <label for="satisfaction2">Yes</label><br>
+                        <input type="radio" name="satisfaction" value="satisfaction3" id="satisfaction3">
+                        <label for="satisfaction3">Yes</label><br>
+                        <input type="radio" name="satisfaction" value="satisfaction4" id="satisfaction4">
+                        <label for="satisfaction4">Yes</label><br>
+                        <input type="radio" name="satisfaction" value="satisfaction5" id="satisfaction5">
+                        <label for="satisfaction5">Yes</label><br>
+                        <input type="radio" name="satisfaction" value="satisfaction6" id="satisfaction6">
+                        <label for="satisfaction6">Yes</label><br>
+                    </p>
+                    <p>
+                        <input type="submit" value="I'm done !" id="submit" />
+                    </p>    
+                </form> 
+            </main>          
+            <p>Phew, that was boring, isn't It ? But I warned you my friend... and I won't give you back the time you wasted here.</p>       
+        </div>
+    </body>
+</html>

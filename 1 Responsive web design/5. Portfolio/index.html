@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+        <title>FCC - Personal Portfolio Webpage</title>
+    </head>
+    <body>
+        <div id="wraper">
+            <header>
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="#welcome-section">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">My projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section id="welcome-section">
+                    <h1>Léonard's portfolio page</h1>
+                </section>
+
+                <section id="about">
+                    <h2>About</h2>
+                    <div class="about-container">
+                        <div class="left">
+                            <img src="images/kapelusz.png" alt="My hat">
+                        </div>
+                        <div class="right">
+                            <p>Welcome on my portfolio page :-]</p>
+                            <p>Besides this, I have no much to say... but if you want to read something, here are some Lipsum :</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur ducimus molestiae odit sequi neque molestias vel. Dolorem sequi aspernatur maxime natus nesciunt repellat fugit necessitatibus tempora eos vel beatae, sed voluptates, dolores odit iste deleniti molestiae, suscipit in amet est assumenda culpa. Suscipit ipsam labore cumque nihil quibusdam nostrum at voluptates in odio dolor. Corporis temporibus expedita accusamus alias odit optio voluptates nam laborum. Est nihil, ut molestias nostrum fugiat repudiandae, inventore, quis reiciendis sapiente corporis cumque minus! Quidem excepturi, debitis cupiditate aliquam deserunt esse id dicta voluptatem sint quasi, asperiores nesciunt suscipit laboriosam. Corrupti odit illum at iusto doloribus!</p>
+                            <p>You're welcome.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <p>(Quantity and quality subject to change)</p>
+                    <div class="project-tile">
+                        <a href="https://codepen.io/leoncik/pen/XWgjpXq" target="_blank"><img src="images/Fcc-Project-Satie.png" alt="A webpage about Erik Satie"></a>
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <blockquote>Pour vivre heureux, vivons cachés <br> [To live happy, live hidden]</blockquote>
+                    <p id="comment-contact">This is a wise principle... feel free to ignore this section.</p>
+
+                    <form method="post" action="hiddenpage.php" id="form">
+                        <p>
+                            <label for="name" id="name-label">Name</label><br>
+                            <input type="text" name="name" placeholder="Your name" id="name" disabled>
+                        </p>
+                        <p>
+                            <label for="email" id="email-label">Email</label><br>
+                            <input type="email" name="email" placeholder="Your email adress" id="email" disabled>
+                        </p>                    
+                        <p>
+                            <label for="comment">Comment</label><br>
+                            <textarea name="comment" id="comment" placeholder="Please, do not write..." disabled></textarea>
+                        </p>                    
+                        <p id="last">
+                            <input type="submit" value="Don't send" id="submit" disabled />
+                        </p>    
+                    </form>
+                    <div class="contact-media">
+                        <a href="https://github.com/leoncik" target="_blank" id="profile-link">GitHub</a>
+                    </div>
+                </section>
+            </main>
+        </div>    
+    </body>
+</html>

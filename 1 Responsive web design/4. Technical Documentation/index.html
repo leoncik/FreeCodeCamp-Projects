@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FCC - Technical Documentation Page</title>
+</head>
+
+<body>
+    <div id="wraper">
+        <nav id="navbar">
+            <header><h2>Table of content</h2></header>            
+            <ul>
+                <li><a href="#NAME" class="nav-link">NAME</a></li>
+                <li><a href="#SYNOPSIS" class="nav-link">SYNOPSIS</a></li>
+                <li><a href="#DESCRIPTION" class="nav-link">DESCRIPTION</a></li>
+                <li><a href="#OPTIONS" class="nav-link">OPTIONS</a></li>
+                <li><a href="#PARAMETERS" class="nav-link">PARAMETERS</a></li>
+                <li><a href="#NOTES" class="nav-link">NOTES</a>
+                    <ul>
+                        <li><a href="#Input_Images" class="nav-link">Input Images</a></li>
+                        <li><a href="#Mapped-texture_Stereograms" class="nav-link">Mapped-texture Stereograms</a></li>
+                        <li><a href="#Miscellaneous" class="nav-link">Miscellaneous</a></li>
+                    </ul>
+                </li>
+                <!-- Pour les "nest list" (liste dans liste), le "ul" doit être un enfant du "li" -->
+                <li><a href="#EXAMPLES" class="nav-link">EXAMPLES</a></li>
+                <li><a href="#SEE_ALSO" class="nav-link">SEE ALSO</a></li>
+                <li><a href="#HISTORY" class="nav-link">HISTORY</a></li>
+                <li><a href="#AUTHOR" class="nav-link">AUTHOR</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-doc">
+            <h1>pamstereogram</h1>
+            <p>Updated: 2 January 2021</p>
+            <section class="main-section" id="NAME">
+                <header><h2>NAME</h2></header>
+                <p>pamstereogram - create a single-image stereogram from a PAM depth map</p>
+            </section>
+            <section class="main-section" id="SYNOPSIS">
+                <header><h2>SYNOPSIS</h2></header>
+                <p>pamstereogram [-help] [-verbose] [-blackandwhite | -grayscale | -color] [-maxval=value] [-patfile=pamfile] [-texfile=pamfile] [-bgcolor=color] [-smoothing=pixels] [-xbegin=pixels] [-xshift=pixels] [-yshift=pixels] [-yfillshift pixels] [-magnifypat=scale] [-guidetop] [-guidebottom] [-guidesize=pixels] [-dpi=resolution] [-crosseyed] [-makemask] [-eyesep=inches] [-depth=fraction] [-planes=near_pixels,far_pixels] [-randomseed=integer] [-tileable] [infile]</p>
+            </section>
+            <section class="main-section" id="DESCRIPTION">
+                <header><h2>DESCRIPTION</h2></header>
+                <p>This program is part of Netpbm.</p>
+                <p>pamstereogram inputs a depth map (a map of the distances from your eye of the points in a scene) and outputs a single-image stereogram (SIS). A SIS is a 2-D image specially designed to appear three dimensional when viewed with relaxed, slightly unfocused eyes. What's exciting about single-image stereograms is that they don't require special glasses to view, although it does require a bit of practice to train your eyes to unfocus properly. The pamstereogram program provides a wealth of control over how the stereogram is generated, including the following:</p>
+                <ul>
+                    <li>black and white, grayscale, or color output</li>
+                    <li>single-image random-dot stereograms (SIRDS), single-image stereograms (SIS) using a tiled image, or mapped-texture stereograms (MTS)</li>
+                    <li>images targeting a given device resolution and eye separation</li>
+                    <li>optional guide boxes to assist in focusing</li>
+                    <li>the ability to trade off depth levels for easier viewing</li>
+                    <li>choice of wall-eyed or cross-eyed stereograms</li>
+                </ul>
+                <p>The output is a PAM image on standard output. Options control the exact format of the PAM. If you want a PNM (PBM, PGM, or PPM) image, use pamtopnm on the output. There is no need to convert if you will use the image as input to a current Netpbm program, but many other programs don't know what a PAM is.</p>
+                <p>To make a red/cyan type of stereogram (that you view with 3-D glasses) instead, see ppm3d.</p>
+            </section>
+            <section class="main-section" id="OPTIONS">
+                <header><h2>OPTIONS</h2></header>
+                <p>You may use either single or double hyphens to denote options. You may use either whitespace or an equals sign to separate an option name from its value.</p>
+                <p>In addition to the options common to all programs based on libnetpbm (most notably -quiet, see Common Options), pamstereogram recognizes the following command line options:</p>
+                <!-- "dl" est une description list. "dt" sont les description term et "dd" define terms -->
+                <dl>
+                    <dt><code>-verbose</code></dt>
+                    <dd>Display messages about image sizes and formats and properties of the stereogram being generated.</dd>
+                    <dt><code>-blackandwhite</code></dt>
+                    <dd>Produce a single-image random-dot black-and-white stereogram. This is the default.</dd>
+                    <dt><code>-grayscale</code></dt>
+                    <dd>Produce a single-image random-dot grayscale stereogram.</dd>
+                    <dt><code>-color</code></dt>
+                    <dd>Produce a single-image random-dot color stereogram.</dd>
+                    <dt><code>-maxval=value</code></dt>
+                    <dd>Designate the maximum value of each gray/color component, i.e. the color resolution. Smaller values make the output image have smaller numbers of unique grays/colors. If you don't specify -maxval, pamstereogram uses the maxval of the input image. This option has no effect with -blackandwhite.</dd>
+                    <dt><code>-patfile=pamfile</code></dt>
+                    <dd>Specify an image to use as a repeated background pattern for the stereogram instead of a random-dot pattern. Intricate images generally produce a crisper 3-D effect that simpler images. The output file will have the same maxval and format (black and white, grayscale or color) as the pattern file. You cannot specify the -patfile option along with -blackandwhite, -grayscale, -color, or -maxval. The -verbose option will give you information on the ideal dimensions of the pattern file.</dd>
+                </dl>
+            </section>
+            <section class="main-section" id="PARAMETERS">
+                <header><h2>PARAMETERS</h2></header>
+                <p>The only parameter, infile, is the name of an input file that is a depth map image. If you don't specify infile, the input is from standard input.</p>
+                <p>The input is a PAM image of depth 1. Each sample represents the distance from the eye that the 3-D image at that location should be. Lower (darker) numbers mean further from the eye.</p>
+            </section>
+            <section class="main-section" id="NOTES">
+                <header><h2>NOTES</h2></header>
+                <section class="main-section" id="Input_Images">
+                    <header><h3>Input Images</h3></header>
+                    <p>pamstereogram pays no attention to the image's tuple type and ignores all planes other than plane 0.</p>
+                    <p>Like any Netpbm program, pamstereogram will accept PNM input as if it were the PAM equivalent.</p>
+                </section>               
+                <section class="main-section" id="Mapped-texture_Stereograms">
+                    <header><h3>Mapped-texture Stereograms</h3></header>
+                    <p>In a mapped-texture stereogram (MTS), the 3-D image can be drawn with true colors. Unlike a SIRDS or tiled-image SIS, however, the image portrayed by an MTS is apparent in normal 2-D viewing. It appears repeated multiple times and overlapped with itself, but it is not hidden.</p>
+                    <p>You create an MTS with pamstereogram by passing the filename of a PAM "texture image" with a -texfile option. A texture image portrays the same 3-D object as the depth-map image but indicates the colors that the program should apply to the object.</p>
+                    <p>pamstereogram ignores the texture image's background color when it overlaps copies of the 3-D object. This prevents, for example, a bright-red object on a black background from being drawn as a dark-red object (a blend of 50% bright red and 50% black); instead, the program ignores the black and the object remains bright red. A consequence of this feature is that an MTS looks best when the objects in the texture image have a crisp outline. Smooth transitions to the background color result in unwanted color artifacts around edges because the program ignores only exact matches with the background color.</p>
+                    <p>You should specify a larger-than-normal value for -eyesep (and/or -dpi) when producing an MTS. Otherwise, the 3-D object will repeat so many times that most colored pixels will overlap other colored pixels, reducing the number of true-colored pixels that remain.</p>
+                    <p>An MTS can employ a background pattern (-patfile). In this case, pamstereogram replaces background pixels with pattern pixels in the final step of generating the image.</p>
+                </section>
+                <section class="main-section" id="Miscellaneous">
+                    <header><h3>Miscellaneous</h3></header>                    
+                    <p>A good initial test is to input an image consisting of a solid shape of distance 0 within a large field of maximum distance (e.g., a white square on a black background).</p>
+                    <p>With the default values for -dpi and -eyesep, pattern images that are 128 pixels wide can tile seamlessly.</p>
+                </section>              
+            </section>
+            <section class="main-section" id="EXAMPLES">
+                <header><h2>EXAMPLES</h2></header>
+                <p>Generate a SIRDS out of small, brightly colored squares and prepare it for display on an 87 DPI monitor:</p>
+                <!-- Texte préformaté pour garder l'apparence -->
+                <pre>    pamstereogram depthmap.pam \
+                    -dpi 87 -verbose -color -maxval 1 -magnifypat 3 \
+                    >3d.pam</pre>
+                    <p>Generate a SIS by tiling a PPM file (a prior run with -verbose indicates how wide the pattern file should be for seamless tiling, although any width is acceptable for producing SISes):</p>
+                    <pre>pamstereogram depthmap.pam -patfile mypattern.ppm >3d.pam</pre>
+                    <p>Generate an MTS by associating colors with a depth-mapped object (using a large eye separation to reduce the number of repetitions of the texture image) and twice smoothing over background-colored speckles:</p>
+                    <pre>pamstereogram depthmap.pam \
+                        -texfile colormap.pam -smoothing 2 -eyesep 3.5 \
+                        >3d.pam
+                    </pre>
+            </section>
+            <section class="main-section" id="SEE_ALSO">
+                <header><h2>SEE ALSO</h2></header>
+                <ul>
+                    <li><a href="http://netpbm.sourceforge.net/doc/pam.html">pam</a></li>
+                    <li><a href="http://netpbm.sourceforge.net/doc/pamsistoaglyph.html">pamsistoaglyph</a></li>
+                    <li><a href="http://netpbm.sourceforge.net/doc/ppm3d.html">ppm3d</a></li>
+                    <li>Harold W. Thimbleby, Stuart Inglis, and Ian H. Witten. Displaying 3D Images: Algorithms for Single Image Random Dot Stereograms. In IEEE Computer, 27(10):38-48, October 1994. DOI: 10.1109/2.318576.</li>
+                    <li>W. A. Steer. Stereograms: Technical Details. URL: http://www.techmind.org/stereo/stech.html.</li>
+                </ul>
+            </section>
+            <section class="main-section" id="HISTORY">
+                <header><h2>HISTORY</h2></header>
+                <p>pamstereogram was new in Netpbm 10.22 (April 2004), but probably broken beyond usability until Netpbm 10.32 (February 2006) and Netpbm 10.26.23 (January 2006).</p>
+                <p>A backward incompatible change to the way you request guide boxes (-guidetop, -guidebottom, -guidesize happened in Netpbm 10.61 (December 2012).</p>
+            </section>
+            <section class="main-section" id="AUTHOR">
+                <header><h2>AUTHOR</h2></header>
+                <p>Copyright © 2006-2020 Scott Pakin, <a href="mailto:scott+pbm@pakin.org">scott+pbm@pakin.org</a></p>
+            </section>
+        </main>
+    </div>
+    
+</body>
+</html>
+<!-- Source 1) http://netpbm.sourceforge.net/doc/pamstereogram.html#synopsis
+            2) https://man.archlinux.org/man/extra/netpbm/pamstereogram.1.en-->

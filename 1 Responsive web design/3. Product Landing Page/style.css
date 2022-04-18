@@ -1,0 +1,298 @@
+/* General stuff */
+body
+{
+    margin: 0;
+    font-family: 'Eagle Lake', cursive;
+}
+h1, h2, h3, p, li, blockquote, a
+{
+    color: white;
+    text-shadow: white 0px 0px 10px;
+}
+#about h2, #findme h2, #music h2, #testimonials h2, #contact h2
+{
+    margin: 0;
+    padding-top: 35px;
+    text-align: center;
+}
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    color: rgb(204, 204, 204);
+}
+img
+{
+    box-shadow: 5px 3px 5px rgb(165, 160, 160);
+}
+
+
+/* Header */
+#top-header
+{
+    padding-top: 20px;
+    padding-left: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+header
+{
+    background: url("images/flowers-music.avif"), linear-gradient(180deg, #00000088 30%, #ffffff73 100%);;
+    background-position: 50% 5%, 100% 100%;
+    background-blend-mode: overlay;
+    height:650px;
+    width: 100%;
+}
+
+#header-img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 5px;
+}
+
+h1
+{
+    position: relative;
+    bottom: 25px;
+}
+#logo p
+{
+    position: relative;
+    bottom: 40px;
+    right: 25px;
+    font-style: italic;
+}
+
+#top-header /* For this project It was necessary to set the header to a position "fixed"… but I don't like the effect, so I removed It. See the CodePen version of this page of you want to see It with a fixed header ;-) */
+{
+    /* position: fixed;  */
+    background-color: black;
+    width: 100%;
+    height: 150px;
+}
+#nav-bar
+{
+    margin-right: 25px;
+}
+#nav-bar ul
+{
+    display: flex;
+}
+li
+{
+    list-style: none;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+header
+{
+    position: relative;
+}
+
+#hero-text
+{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 130px;
+}
+#hero-text p
+{
+    text-align: center;
+    font-size: 4em;
+}
+
+/* About */
+
+#about
+{
+    background: radial-gradient(circle at left, rgb(228, 243, 228), rgb(45, 45, 46), rgb(12, 12, 12) 80%);
+    padding-bottom: 50px;
+}
+#about-container
+{
+    display: flex;
+    justify-content: center;
+    gap: 40px
+}
+.righttext, .map
+{
+    justify-self: center;
+    margin-right: 40px;
+}
+.leftpicture, .textfindme
+{
+    margin-left: 40px;
+}
+#about img
+{
+    width: 300px;
+    height: 370px;
+}
+
+/* Findme */
+#findme
+{
+    background-image: url("images/map.avif");
+    background-color: rgba(0, 0, 0, 0.685);
+    background-blend-mode: overlay;
+    padding-bottom: 50px;
+}
+#firstp
+{
+    margin-top: 0;
+}
+.textfindme img
+{
+    width: 500px;
+    height: 400px;
+
+}
+#findme-container
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 40px
+}
+.map
+{
+    align-self: flex-end;
+}
+iframe {
+    border-width: 0;
+}
+
+/* Music */
+#music
+{
+    background-image: url("images/sheetmusic.avif");
+    background-color: rgba(4, 24, 196, 0.582);
+    background-blend-mode: overlay;
+}
+#music h3
+{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#video-frame
+{
+    text-align: center;
+}
+#prestations
+{
+    display: flex;
+    justify-content: center;
+}
+#prestations img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+#preludes
+{
+    width: 400px;
+}
+#fantaisies
+{
+    width: 400px;
+}
+#ammeublement
+{
+    width: 400px;
+}
+.imageprestations, #fantaisies p, #ammeublement p, #preludes p
+{
+    text-align: center;
+}
+
+/* Testimonials */
+#testimonials
+{
+    background-image: url("images/velour.jpg");
+    background-color: rgba(220, 20, 60, 0.295);
+    background-blend-mode: overlay;
+    padding-bottom: 70px;
+}
+#testimonials h2
+{
+    margin-bottom: 50px;
+}
+#testimonials-container
+{
+    display: flex;
+}
+#chopin img, #knock img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin: 0 25px 0 25px;
+}
+
+/* Contact */
+
+#contact
+{
+    background-image: url("images/mysterious-moonsky.avif");
+}
+form
+{
+    margin-left: 100px;
+    padding-bottom: 50px;
+}
+textarea
+{
+    width: 500px;
+    height: 100px;
+}
+#last
+{
+    margin-bottom: 0;
+}
+
+/* Responsive mode */
+@media screen and (max-width: 960px) {
+    #top-header, #about-container, #findme-container, #prestations, #testimonials-container
+    {
+        flex-direction: column;
+    }
+    #about-container, #findme-container, #prestations
+    {
+        align-items: center;
+    }
+    #nav-bar
+    {
+        display: none;
+    }
+
+    #hero-text
+    {
+        bottom: 80px
+    }
+    #logo p
+    {
+        bottom: 40px;
+        right: 0;
+    }
+    #about .righttext
+    {
+        padding-left: 40px;
+    }
+    #knock
+    {
+        margin-top: 20px;
+    }
+}

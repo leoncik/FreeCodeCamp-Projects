@@ -1,0 +1,140 @@
+/* General */
+
+body
+{
+    margin: 0;
+    font-family: 'Alegreya', serif;
+}
+h2
+{
+    margin-top: 0;
+    padding-top: 40px;
+}
+h1
+{
+    padding-top: 40px;
+    font-size: 3em;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+li a, #contact a
+{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Welcome */
+#welcome-section
+{
+    /* I really like that background image ! */
+    background-image: url("images/cervin.avif");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul
+{
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+}
+li
+{
+    list-style: none;
+}
+header
+{
+    position: fixed;
+    width: 100%;
+    background-color: black;
+}
+
+/* About */
+h2
+{
+    text-align: center;
+}
+.about-container
+{
+    display: flex;
+}
+.right
+{
+    padding-right: 40px;
+    padding-left: 15px;
+}
+.left img
+{
+    width: 250px;
+    height: 250px;
+}
+#about
+{
+    background-color: #152537;
+}
+#about p, h2
+{
+    color: white;
+}
+
+/* Projects */
+
+#projects *
+{
+    text-align: center;
+}
+#projects
+{
+    background-image: url("images/SteinsGate_0-motives.jpg");
+    padding-bottom: 10px;
+    color: white;
+}
+
+/* Contact */
+#contact
+{
+    background-image: url("images/mist.avif");
+    color: white;
+}
+#comment-contact
+{
+    margin-left: 100px;
+}
+form
+{
+    margin-left: 100px;
+}
+textarea
+{
+    width: 300px;
+}
+blockquote
+{
+    text-align: center;
+}
+.contact-media
+{
+    text-align: center;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 800px)
+{
+    .about-container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .right
+    {
+        padding-left: 40px;
+    }
+}

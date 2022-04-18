@@ -1,0 +1,58 @@
+/* General stuff */
+body
+{
+    background-image: radial-gradient(at 50% 50%, red 10px, yellow 30%, #1e90ff 50%);
+    font-family: 'Bubblegum Sans', cursive;
+}
+h1
+{
+    font-size: 4em;
+}
+h1, header p
+{
+    text-align: center;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
+}
+header p, #wraper > *:last-child
+{
+    font-size: 2em;
+}
+#wraper > *:last-child
+{
+    text-align: center;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+}
+
+/* form style */
+
+form
+{
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white;
+    border-radius: 25px;
+    padding: 25px;
+    width: fit-content;
+    margin: auto;
+}
+#name, #email, #dropdown, #number
+{
+    border-radius: 5px;
+}
+textarea
+{
+    background: rgba(221, 228, 221, 0.144);
+    color: white;
+    width: 500px;
+    height: 100px;
+}
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.753);
+  }
+#number
+{
+    width: 300px;
+}
