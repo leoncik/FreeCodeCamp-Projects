@@ -1,7 +1,13 @@
-body {
-    font-size: 2.2rem;
+html {
     background-image: url("background.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+body {
+    font-size: 2.2rem;
     color: white;
     text-shadow: 1px 1px 2px black;
 }
@@ -25,4 +31,16 @@ body {
 }
 .result {
     text-align: center;
+}
+
+/* Responsive mode */
+@media screen and (max-width: 600px) {
+    .question-section {
+        margin-top: 15vh;
+        text-align: center;
+        flex-direction: column;
+    }
+    .entry {
+        width: 100%;
+    }
 }
