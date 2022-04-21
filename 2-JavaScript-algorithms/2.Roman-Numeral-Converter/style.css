@@ -1,0 +1,64 @@
+/* Todo : add custom fonts, improve bubbles, check responsive */
+
+/* Characters and scene */
+
+img {
+    max-height: 500px;
+}
+
+.scene {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.asterix {
+    align-self: end;
+}
+
+/* Bubbles */
+.asterix__bubble {
+    position: relative;
+    bottom: 20px;
+    left: 60px;
+    background-color: #f7000f;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 13px;
+}
+/* .asterix__bubble::after {
+    content: "";
+    position: absolute;
+    top: 42px;
+    left: 15px;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+    border-top: 20px solid black;
+}
+.asterix__bubble::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 48px;
+    left: 25px;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    
+    border-top: 10px solid white;
+} */
+
+.obelix__bubble {
+    position: relative;
+    right: 100px;
+    top: 20px;
+    max-width: 300px;
+    color: white;
+    background-color: #a2beed;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 13px;
+}
